@@ -31,8 +31,8 @@ function showSequence() {
 
 function flashColor(color) {
   const el = document.getElementById(color);
-  el.style.opacity = "1";
-  setTimeout(() => el.style.opacity = "0.8", 400);
+  el.classList.add("flash");
+  setTimeout(() => el.classList.remove("flash"), 400);
 }
 
 colors.forEach(color => {
@@ -55,3 +55,4 @@ function checkSequence() {
     setTimeout(nextRound, 1000);
   }
 }
+
