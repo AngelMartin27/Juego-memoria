@@ -1,37 +1,178 @@
 body {
   font-family: sans-serif;
   text-align: center;
-  background-color: #000000;
+  background-color: #000;
+  color: #fff;
 }
 
+/* === TABLERO === */
 #game-board {
   display: grid;
-  grid-template-columns: repeat(2, 150px);
-  grid-gap: 20px;
+  grid-template-columns: repeat(2, 180px);
+  grid-gap: 25px;
   justify-content: center;
-  margin: 30px auto;
+  margin: 40px auto;
 }
 
+/* === COLORES === */
 .color {
-  width: 150px;
-  height: 150px;
-  border-radius: 10px;
+  width: 180px;
+  height: 180px;
+  border-radius: 15px;
   cursor: pointer;
-  opacity: 0.8;
-  transition: opacity 0.3s;
+  opacity: 0.6;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
-.color:hover {
-  opacity: 1;
+/* Colores base */
+#red {
+  background-color: #b30000;
 }
 
-#red { background-color: red; }
-#blue { background-color: blue; }
-#green { background-color: green; }
-#yellow { background-color: yellow; }
+#blue {
+  background-color: #0040ff;
+}
 
+#green {
+  background-color: #009933;
+}
+
+#yellow {
+  background-color: #e6b800;
+}
+
+/* === EFECTO FLASH FUERTE === */
+.flash {
+  animation: flashAnim 0.4s ease;
+}
+
+@keyframes flashAnim {
+  0% {
+    transform: scale(1);
+    filter: brightness(1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  }
+
+  40% {
+    transform: scale(1.25);
+    filter: brightness(3);
+    box-shadow: 0 0 60px 20px white;
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    filter: brightness(1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* === BOTÓN DE INICIO === */
 button {
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 12px 28px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  background: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #ddd;
+  transform: scale(1.05);
+}
+
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+}
+
+/* === TABLERO === */
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(2, 180px);
+  grid-gap: 25px;
+  justify-content: center;
+  margin: 40px auto;
+}
+
+/* === COLORES === */
+.color {
+  width: 180px;
+  height: 180px;
+  border-radius: 15px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Colores base */
+#red {
+  background-color: #b30000;
+}
+
+#blue {
+  background-color: #0040ff;
+}
+
+#green {
+  background-color: #009933;
+}
+
+#yellow {
+  background-color: #e6b800;
+}
+
+/* === EFECTO FLASH FUERTE === */
+.flash {
+  animation: flashAnim 0.4s ease;
+}
+
+@keyframes flashAnim {
+  0% {
+    transform: scale(1);
+    filter: brightness(1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  }
+
+  40% {
+    transform: scale(1.25);
+    filter: brightness(3);
+    box-shadow: 0 0 60px 20px white;
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    filter: brightness(1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* === BOTÓN DE INICIO === */
+button {
+  padding: 12px 28px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  background: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #ddd;
+  transform: scale(1.05);
 }
 
