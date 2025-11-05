@@ -1,0 +1,36 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  grid-gap: 20px;
+  justify-content: center;
+  margin: 30px auto;
+}
+
+.color {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.color:hover {
+  opacity: 1;
+}
+
+#red { background-color: red; }
+#blue { background-color: blue; }
+#green { background-color: green; }
+#yellow { background-color: yellow; }
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
